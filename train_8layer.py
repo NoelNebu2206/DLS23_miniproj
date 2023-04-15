@@ -80,7 +80,6 @@ class ModifiedResNet18_with_true_8_layers(nn.Module):
 
 
         self.avgpool = nn.AdaptiveAvgPool2d((1, 1))
-        #self.fc1 = nn.Linear(num_hidden*13 * BasicBlock.expansion, num_hidden*2 * BasicBlock.expansion)
         self.fc1 = nn.Linear(num_hidden*8 * BasicBlock.expansion, num_classes)
 
         
@@ -102,7 +101,6 @@ class ModifiedResNet18_with_true_8_layers(nn.Module):
         x = self.avgpool(x)
         x = torch.flatten(x, 1)
         x = self.fc1(x)
-        #x = self.fc2(x)
 
         return x
 
