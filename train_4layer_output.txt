@@ -1,0 +1,306 @@
+Files already downloaded and verified
+Files already downloaded and verified
+4349563
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 39, 16, 16]           5,733
+       BatchNorm2d-2           [-1, 39, 16, 16]              78
+              ReLU-3           [-1, 39, 16, 16]               0
+         MaxPool2d-4             [-1, 39, 8, 8]               0
+            Conv2d-5             [-1, 39, 8, 8]          13,689
+       BatchNorm2d-6             [-1, 39, 8, 8]              78
+              ReLU-7             [-1, 39, 8, 8]               0
+            Conv2d-8             [-1, 39, 8, 8]          13,689
+       BatchNorm2d-9             [-1, 39, 8, 8]              78
+             ReLU-10             [-1, 39, 8, 8]               0
+       BasicBlock-11             [-1, 39, 8, 8]               0
+           Conv2d-12             [-1, 39, 8, 8]          13,689
+      BatchNorm2d-13             [-1, 39, 8, 8]              78
+             ReLU-14             [-1, 39, 8, 8]               0
+           Conv2d-15             [-1, 39, 8, 8]          13,689
+      BatchNorm2d-16             [-1, 39, 8, 8]              78
+             ReLU-17             [-1, 39, 8, 8]               0
+       BasicBlock-18             [-1, 39, 8, 8]               0
+           Conv2d-19             [-1, 78, 4, 4]          27,378
+      BatchNorm2d-20             [-1, 78, 4, 4]             156
+             ReLU-21             [-1, 78, 4, 4]               0
+           Conv2d-22             [-1, 78, 4, 4]          54,756
+      BatchNorm2d-23             [-1, 78, 4, 4]             156
+           Conv2d-24             [-1, 78, 4, 4]          12,168
+      BatchNorm2d-25             [-1, 78, 4, 4]             156
+             ReLU-26             [-1, 78, 4, 4]               0
+       BasicBlock-27             [-1, 78, 4, 4]               0
+           Conv2d-28             [-1, 78, 4, 4]          54,756
+      BatchNorm2d-29             [-1, 78, 4, 4]             156
+             ReLU-30             [-1, 78, 4, 4]               0
+           Conv2d-31             [-1, 78, 4, 4]          54,756
+      BatchNorm2d-32             [-1, 78, 4, 4]             156
+             ReLU-33             [-1, 78, 4, 4]               0
+       BasicBlock-34             [-1, 78, 4, 4]               0
+           Conv2d-35            [-1, 156, 2, 2]         109,512
+      BatchNorm2d-36            [-1, 156, 2, 2]             312
+             ReLU-37            [-1, 156, 2, 2]               0
+           Conv2d-38            [-1, 156, 2, 2]         219,024
+      BatchNorm2d-39            [-1, 156, 2, 2]             312
+           Conv2d-40            [-1, 156, 2, 2]          48,672
+      BatchNorm2d-41            [-1, 156, 2, 2]             312
+             ReLU-42            [-1, 156, 2, 2]               0
+       BasicBlock-43            [-1, 156, 2, 2]               0
+           Conv2d-44            [-1, 156, 2, 2]         219,024
+      BatchNorm2d-45            [-1, 156, 2, 2]             312
+             ReLU-46            [-1, 156, 2, 2]               0
+           Conv2d-47            [-1, 156, 2, 2]         219,024
+      BatchNorm2d-48            [-1, 156, 2, 2]             312
+             ReLU-49            [-1, 156, 2, 2]               0
+       BasicBlock-50            [-1, 156, 2, 2]               0
+           Conv2d-51            [-1, 312, 1, 1]         438,048
+      BatchNorm2d-52            [-1, 312, 1, 1]             624
+             ReLU-53            [-1, 312, 1, 1]               0
+           Conv2d-54            [-1, 312, 1, 1]         876,096
+      BatchNorm2d-55            [-1, 312, 1, 1]             624
+           Conv2d-56            [-1, 312, 1, 1]         194,688
+      BatchNorm2d-57            [-1, 312, 1, 1]             624
+             ReLU-58            [-1, 312, 1, 1]               0
+       BasicBlock-59            [-1, 312, 1, 1]               0
+           Conv2d-60            [-1, 312, 1, 1]         876,096
+      BatchNorm2d-61            [-1, 312, 1, 1]             624
+             ReLU-62            [-1, 312, 1, 1]               0
+           Conv2d-63            [-1, 312, 1, 1]         876,096
+      BatchNorm2d-64            [-1, 312, 1, 1]             624
+             ReLU-65            [-1, 312, 1, 1]               0
+       BasicBlock-66            [-1, 312, 1, 1]               0
+AdaptiveAvgPool2d-67            [-1, 312, 1, 1]               0
+           Linear-68                   [-1, 10]           3,130
+           ResNet-69                   [-1, 10]               0
+================================================================
+Total params: 4,349,563
+Trainable params: 4,349,563
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.01
+Forward/backward pass size (MB): 0.78
+Params size (MB): 16.59
+Estimated Total Size (MB): 17.39
+----------------------------------------------------------------
+Summary second time None
+[EPOCH: 1,   100] loss: 2.028
+[EPOCH: 1,   200] loss: 1.676
+[EPOCH: 1,   300] loss: 1.557
+Accuracy on test set: 49 %
+[EPOCH: 2,   100] loss: 1.405
+[EPOCH: 2,   200] loss: 1.318
+[EPOCH: 2,   300] loss: 1.290
+Accuracy on test set: 53 %
+[EPOCH: 3,   100] loss: 1.212
+[EPOCH: 3,   200] loss: 1.155
+[EPOCH: 3,   300] loss: 1.132
+Accuracy on test set: 53 %
+[EPOCH: 4,   100] loss: 1.089
+[EPOCH: 4,   200] loss: 1.055
+[EPOCH: 4,   300] loss: 1.036
+Accuracy on test set: 64 %
+[EPOCH: 5,   100] loss: 0.959
+[EPOCH: 5,   200] loss: 0.970
+[EPOCH: 5,   300] loss: 0.945
+Accuracy on test set: 68 %
+[EPOCH: 6,   100] loss: 0.907
+[EPOCH: 6,   200] loss: 0.885
+[EPOCH: 6,   300] loss: 0.897
+Accuracy on test set: 68 %
+[EPOCH: 7,   100] loss: 0.861
+[EPOCH: 7,   200] loss: 0.858
+[EPOCH: 7,   300] loss: 0.882
+Accuracy on test set: 69 %
+[EPOCH: 8,   100] loss: 0.820
+[EPOCH: 8,   200] loss: 0.822
+[EPOCH: 8,   300] loss: 0.832
+Accuracy on test set: 70 %
+[EPOCH: 9,   100] loss: 0.791
+[EPOCH: 9,   200] loss: 0.801
+[EPOCH: 9,   300] loss: 0.817
+Accuracy on test set: 71 %
+[EPOCH: 10,   100] loss: 0.762
+[EPOCH: 10,   200] loss: 0.813
+[EPOCH: 10,   300] loss: 0.800
+Accuracy on test set: 72 %
+[EPOCH: 11,   100] loss: 0.780
+[EPOCH: 11,   200] loss: 0.782
+[EPOCH: 11,   300] loss: 0.785
+Accuracy on test set: 72 %
+[EPOCH: 12,   100] loss: 0.769
+[EPOCH: 12,   200] loss: 0.766
+[EPOCH: 12,   300] loss: 0.777
+Accuracy on test set: 73 %
+[EPOCH: 13,   100] loss: 0.768
+[EPOCH: 13,   200] loss: 0.797
+[EPOCH: 13,   300] loss: 0.786
+Accuracy on test set: 74 %
+[EPOCH: 14,   100] loss: 0.740
+[EPOCH: 14,   200] loss: 0.749
+[EPOCH: 14,   300] loss: 0.739
+Accuracy on test set: 76 %
+[EPOCH: 15,   100] loss: 0.805
+[EPOCH: 15,   200] loss: 0.747
+[EPOCH: 15,   300] loss: 0.787
+Accuracy on test set: 71 %
+[EPOCH: 16,   100] loss: 0.755
+[EPOCH: 16,   200] loss: 0.728
+[EPOCH: 16,   300] loss: 0.744
+Accuracy on test set: 75 %
+[EPOCH: 17,   100] loss: 0.704
+[EPOCH: 17,   200] loss: 0.742
+[EPOCH: 17,   300] loss: 0.726
+Accuracy on test set: 70 %
+[EPOCH: 18,   100] loss: 0.727
+[EPOCH: 18,   200] loss: 0.733
+[EPOCH: 18,   300] loss: 0.770
+Accuracy on test set: 74 %
+[EPOCH: 19,   100] loss: 0.698
+[EPOCH: 19,   200] loss: 0.740
+[EPOCH: 19,   300] loss: 0.734
+Accuracy on test set: 73 %
+[EPOCH: 20,   100] loss: 0.960
+[EPOCH: 20,   200] loss: 0.845
+[EPOCH: 20,   300] loss: 0.774
+Accuracy on test set: 72 %
+[EPOCH: 21,   100] loss: 0.739
+[EPOCH: 21,   200] loss: 0.701
+[EPOCH: 21,   300] loss: 0.714
+Accuracy on test set: 72 %
+[EPOCH: 22,   100] loss: 0.720
+[EPOCH: 22,   200] loss: 0.720
+[EPOCH: 22,   300] loss: 0.740
+Accuracy on test set: 73 %
+[EPOCH: 23,   100] loss: 0.726
+[EPOCH: 23,   200] loss: 0.927
+[EPOCH: 23,   300] loss: 0.892
+Accuracy on test set: 74 %
+[EPOCH: 24,   100] loss: 0.707
+[EPOCH: 24,   200] loss: 0.808
+[EPOCH: 24,   300] loss: 0.712
+Accuracy on test set: 68 %
+[EPOCH: 25,   100] loss: 0.743
+[EPOCH: 25,   200] loss: 0.671
+[EPOCH: 25,   300] loss: 0.681
+Accuracy on test set: 75 %
+[EPOCH: 26,   100] loss: 0.646
+[EPOCH: 26,   200] loss: 0.655
+[EPOCH: 26,   300] loss: 0.650
+Accuracy on test set: 75 %
+[EPOCH: 27,   100] loss: 0.626
+[EPOCH: 27,   200] loss: 0.640
+[EPOCH: 27,   300] loss: 0.646
+Accuracy on test set: 76 %
+[EPOCH: 28,   100] loss: 0.622
+[EPOCH: 28,   200] loss: 0.640
+[EPOCH: 28,   300] loss: 0.613
+Accuracy on test set: 74 %
+[EPOCH: 29,   100] loss: 0.633
+[EPOCH: 29,   200] loss: 0.653
+[EPOCH: 29,   300] loss: 0.624
+Accuracy on test set: 77 %
+[EPOCH: 30,   100] loss: 0.582
+[EPOCH: 30,   200] loss: 0.592
+[EPOCH: 30,   300] loss: 0.581
+Accuracy on test set: 79 %
+[EPOCH: 31,   100] loss: 0.567
+[EPOCH: 31,   200] loss: 0.594
+[EPOCH: 31,   300] loss: 0.580
+Accuracy on test set: 77 %
+[EPOCH: 32,   100] loss: 0.556
+[EPOCH: 32,   200] loss: 0.554
+[EPOCH: 32,   300] loss: 0.551
+Accuracy on test set: 79 %
+[EPOCH: 33,   100] loss: 0.524
+[EPOCH: 33,   200] loss: 0.533
+[EPOCH: 33,   300] loss: 0.577
+Accuracy on test set: 79 %
+[EPOCH: 34,   100] loss: 0.512
+[EPOCH: 34,   200] loss: 0.508
+[EPOCH: 34,   300] loss: 0.557
+Accuracy on test set: 79 %
+[EPOCH: 35,   100] loss: 0.496
+[EPOCH: 35,   200] loss: 0.501
+[EPOCH: 35,   300] loss: 0.495
+Accuracy on test set: 80 %
+[EPOCH: 36,   100] loss: 0.484
+[EPOCH: 36,   200] loss: 0.487
+[EPOCH: 36,   300] loss: 0.490
+Accuracy on test set: 80 %
+[EPOCH: 37,   100] loss: 0.451
+[EPOCH: 37,   200] loss: 0.474
+[EPOCH: 37,   300] loss: 0.470
+Accuracy on test set: 82 %
+[EPOCH: 38,   100] loss: 0.439
+[EPOCH: 38,   200] loss: 0.444
+[EPOCH: 38,   300] loss: 0.432
+Accuracy on test set: 83 %
+[EPOCH: 39,   100] loss: 0.414
+[EPOCH: 39,   200] loss: 0.428
+[EPOCH: 39,   300] loss: 0.410
+Accuracy on test set: 83 %
+[EPOCH: 40,   100] loss: 0.400
+[EPOCH: 40,   200] loss: 0.408
+[EPOCH: 40,   300] loss: 0.400
+Accuracy on test set: 83 %
+[EPOCH: 41,   100] loss: 0.370
+[EPOCH: 41,   200] loss: 0.379
+[EPOCH: 41,   300] loss: 0.359
+Accuracy on test set: 83 %
+[EPOCH: 42,   100] loss: 0.359
+[EPOCH: 42,   200] loss: 0.347
+[EPOCH: 42,   300] loss: 0.354
+Accuracy on test set: 84 %
+[EPOCH: 43,   100] loss: 0.320
+[EPOCH: 43,   200] loss: 0.328
+[EPOCH: 43,   300] loss: 0.323
+Accuracy on test set: 84 %
+[EPOCH: 44,   100] loss: 0.300
+[EPOCH: 44,   200] loss: 0.309
+[EPOCH: 44,   300] loss: 0.309
+Accuracy on test set: 85 %
+[EPOCH: 45,   100] loss: 0.287
+[EPOCH: 45,   200] loss: 0.287
+[EPOCH: 45,   300] loss: 0.307
+Accuracy on test set: 85 %
+[EPOCH: 46,   100] loss: 0.298
+[EPOCH: 46,   200] loss: 0.281
+[EPOCH: 46,   300] loss: 0.289
+Accuracy on test set: 85 %
+[EPOCH: 47,   100] loss: 0.270
+[EPOCH: 47,   200] loss: 0.278
+[EPOCH: 47,   300] loss: 0.292
+Accuracy on test set: 85 %
+[EPOCH: 48,   100] loss: 0.277
+[EPOCH: 48,   200] loss: 0.284
+[EPOCH: 48,   300] loss: 0.279
+Accuracy on test set: 85 %
+[EPOCH: 49,   100] loss: 0.266
+[EPOCH: 49,   200] loss: 0.277
+[EPOCH: 49,   300] loss: 0.275
+Accuracy on test set: 85 %
+[EPOCH: 50,   100] loss: 0.275
+[EPOCH: 50,   200] loss: 0.270
+[EPOCH: 50,   300] loss: 0.270
+Accuracy on test set: 85 %
+[EPOCH: 51,   100] loss: 0.270
+[EPOCH: 51,   200] loss: 0.259
+[EPOCH: 51,   300] loss: 0.267
+Accuracy on test set: 85 %
+[EPOCH: 52,   100] loss: 0.258
+[EPOCH: 52,   200] loss: 0.270
+[EPOCH: 52,   300] loss: 0.263
+Accuracy on test set: 85 %
+[EPOCH: 53,   100] loss: 0.248
+[EPOCH: 53,   200] loss: 0.263
+[EPOCH: 53,   300] loss: 0.258
+Accuracy on test set: 85 %
+[EPOCH: 54,   100] loss: 0.253
+[EPOCH: 54,   200] loss: 0.255
+[EPOCH: 54,   300] loss: 0.260
+Accuracy on test set: 85 %
+[EPOCH: 55,   100] loss: 0.254
+[EPOCH: 55,   200] loss: 0.244
+[EPOCH: 55,   300] loss: 0.256
+Accuracy on test set: 85 %
