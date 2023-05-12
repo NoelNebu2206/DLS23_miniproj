@@ -13,6 +13,8 @@ from torchviz import make_dot
 
 from torchvision.models.resnet import ResNet18_Weights
 
+import matplotlib.pyplot as plt
+
 import os
 import argparse
 import numpy as np
@@ -135,6 +137,8 @@ num_trainable_params_new = sum(p.numel() for p in model.parameters() if p.requir
 print("New trainable parameters are",num_trainable_params_new)
 print("Summary second time", torchsummary.summary(model, input_size =(3,32,32), device='cpu'))
 
+test_acc = []
+training_loss = []
 
 # Define your loss function and optimizer
 criterion = nn.CrossEntropyLoss()
@@ -151,6 +155,7 @@ scaler = torch.cuda.amp.GradScaler()
 # Train your model
 for epoch in range(num_epochs):
     running_loss = 0.0
+    train_loss = 0.0
     for i, data in enumerate(trainloader, 0):
 
         model.train()
@@ -177,11 +182,13 @@ for epoch in range(num_epochs):
 
         # Print statistics
         running_loss += loss.item()
+        train_loss += loss.item()
         if i % 100 == 99:
             print('[EPOCH: %d, %5d] loss: %.3f' %
                   (epoch + 1, i + 1, running_loss / 100))
             running_loss = 0.0
-
+    training_loss.append(train_loss/100)
+    
     # Test your model
     model.eval()
     correct = 0
@@ -200,3 +207,19 @@ for epoch in range(num_epochs):
             correct += (predicted == labels).sum().item()
     
     print('Accuracy on test set: %d %%' % (100 * correct / total))
+    test_acc.append(100*correct/total)
+
+# Plot test accuracy vs epoch
+plt.plot(range(1,num_epochs+1), test_acc)
+plt.title('Test Accuracy vs Epoch')
+plt.xlabel('Epoch')
+plt.ylabel('Test Accuracy')
+plt.show()
+
+# Plot training loss vs epoch
+plt.plot(range(1,num_epochs), training_loss)
+plt.title('Training Loss vs Epoch')
+plt.xlabel('Epoch')
+plt.ylabel('Training Loss')
+plt.show()
+
